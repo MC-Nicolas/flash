@@ -2,10 +2,11 @@ import React from 'react';
 
 interface ButtonIconProps {
   icon: JSX.Element;
+  onClick?: () => void;
 }
 
-const ButtonIcon = ({ icon }: ButtonIconProps) => {
-  return <button>{icon}</button>;
+const ButtonIcon = ({ icon, onClick }: ButtonIconProps) => {
+  return <button onClick={onClick}>{icon}</button>;
 };
 
 export default ButtonIcon;

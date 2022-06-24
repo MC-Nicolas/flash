@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import FlashCard from '../flashCard/flashCard.component';
 import FlexContainer from '../flexContainer/flexContainer.component';
@@ -16,7 +17,7 @@ interface FlasCardsType {
 }
 
 const FlashCardsContainer = () => {
-  const dispatch = useAppDispatch();
+  let navigate = useNavigate();
   const [flashCardIsRevelead, setFlashCardIsRevelead] = useState(false);
   const [flashCardNumber, setFlashCardNumber] = useState(1);
   const userState = useAppSelector((state) => state.user);
@@ -56,10 +57,7 @@ const FlashCardsContainer = () => {
             onClick={handleOnNext}
           />
         ) : (
-          <Button
-            variant='contained'
-            onClick={() => dispatch(setActiveSubFolder(''))}
-          >
+          <Button variant='contained' onClick={() => navigate(-1)}>
             Return
           </Button>
         )}
