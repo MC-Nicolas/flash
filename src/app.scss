@@ -1,0 +1,12 @@
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.8;
+
+  background-image: url('https://images.unsplash.com/photo-1530545124313-ce5e8eae55af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80');
+}
